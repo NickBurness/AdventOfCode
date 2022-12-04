@@ -11,12 +11,9 @@ def part1():
     with open("C:/Users/nickb/source/repos/Personal/AdventOfCode/2022/data/day3.txt") as file:
         for line in file:
             first_compartment = line[:len(line)//2]
-            print(first_compartment)
             second_compartment = line[len(line)//2:]
-            print(second_compartment)
 
             has_match = False
-
             for item_a in first_compartment:
                     if item_a not in second_compartment:
                         continue
@@ -40,7 +37,6 @@ def part2():
             elves.append(elf_sack)
 
     elf_groups = [elves[n:n+3] for n in range(0, len(elves), 3)]
-    print(elf_groups)
 
     for elf_group in elf_groups:
         for elf_sack in elf_group:
